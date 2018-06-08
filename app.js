@@ -8,8 +8,24 @@ var bodyParser = require('body-parser');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-var user = require('./model/rate');
+
+//  model setup
+var rate = require('./model/rate');
+var money = require('./model/money');
+
+const db = {};
+const Sequelize = require('sequelize');
+var sequelize = require('./model/config');
+db.Sequelize = Sequelize;  
+db.sequelize = sequelize;
+db.rate = require('./model/rate');  
+db.money = require('./model/money');  
+
+db.money.belongsTo(db.rate); 
+
 var app = express();
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
