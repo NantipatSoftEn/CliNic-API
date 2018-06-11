@@ -6,7 +6,7 @@ var app = express();
 
 var userController              = require('../service/UserServices');
 
-app.resource('test', userController);
+app.resource('user', userController);
 
 //app.resource('', );
 

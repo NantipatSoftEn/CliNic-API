@@ -20,27 +20,26 @@ sequelize.authenticate()
 
 // create table
 // sequelize.sync();
+// sequelize.sync()
+//     .then(() => model.users.create({
+//         id: '',
+//         name: 'arm',
+//         lastname: 'horyshit',
+//         telephone: '08878',
+//         gender: 'male',
+//         symptomId: 1,
+//         typeUser: 1,
+//         status: 1,
+//         createdAt: '',
+//         updatedAt: ''
+//     }));
 
-sequelize.sync()
-    .then(() => model.users.create({
-        id: '',
-        name: 'arm',
-        lastname: 'horyshit',
-        telephone: '08878',
-        gender: 'male',
-        symptomId: 1,
-        typeUser: 1,
-        status: 1,
-        createdAt: '',
-        updatedAt: ''
-    }));
-
-sequelize.sync()
-    .then(() => model.symptom.create({
-        id: '',
-        symptomname: 'headage',
-        other: 'sdfdsfs'
-    }));
+// sequelize.sync()
+//     .then(() => model.symptom.create({
+//         id: '',
+//         symptomname: 'headage',
+//         other: 'sdfdsfs'
+//     }));
 const op = Sequelize.Op;
 
 const model = {};
