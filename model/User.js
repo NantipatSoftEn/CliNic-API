@@ -9,13 +9,6 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             autoIncrement: true,
         },
-        refId: {
-            field: 'ref_id',
-            type: DataTypes.STRING(100),
-            primaryKey: false,
-            allowNull: true,
-            autoIncrement: false
-        },
         name: {
             field: 'name',
             type: DataTypes.STRING(191),
@@ -23,18 +16,47 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             autoIncrement: false,
         },
-        password: {
+        lastname: {
             field: 'password',
             type: DataTypes.STRING(191),
             primaryKey: false,
             allowNull: false,
-      
+
+        },
+        telephone: {
+            field: 'telephone',
+            type: DataTypes.STRING(191),
+            primaryKey: false,
+            allowNull: false,
+        },
+        gender: {
+            field: 'gender',
+            type: DataTypes.ENUM('male', 'female'),
+            allowNull: false,
+        },
+        symptomId: {
+            field: 'symptom_id',
+            type: DataTypes.INTEGER(10).UNSIGNED,
+            primaryKey: true,
+            allowNull: false,
+        },
+        typeUser: {
+            field: 'typeuser',
+            type: DataTypes.INTEGER(1),
+            primaryKey: false,
+            allowNull: false,
+        },
+        status: {
+            field: 'status',
+            type: DataTypes.STRING(1),
+            primaryKey: false,
+            allowNull: false,
         },
         createdAt: {
             field: 'created_at',
             type: DataTypes.DATE,
             primaryKey: false,
-         
+
         },
         updatedAt: {
             field: 'updated_at',
@@ -43,6 +65,6 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: false,
         },
     });
-    
-    
+
+
 }

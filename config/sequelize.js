@@ -18,22 +18,29 @@ sequelize.authenticate()
     });
 
 
-    // create table
-     sequelize.sync(); 
+// create table
+// sequelize.sync();
 
-    // sequelize.sync()
-    // .then(() => model.users.create({
-    //   id: '',
-    // refId: '5730213',
-    // name: 'arm',
-    // email: 'arm@gmail.com',
-    // username: 'admin',
-    // phone:'084448',
-    // pin:'1150',
-    // password: 'asaasdada',
-    // createdAt:'',
-    // updatedAt:''
-    // }));
+sequelize.sync()
+    .then(() => model.users.create({
+        id: '',
+        name: 'arm',
+        lastname: 'horyshit',
+        telephone: '08878',
+        gender: 'male',
+        symptomId: 1,
+        typeUser: 1,
+        status: 1,
+        createdAt: '',
+        updatedAt: ''
+    }));
+
+sequelize.sync()
+    .then(() => model.symptom.create({
+        id: '',
+        symptomname: 'headage',
+        other: 'sdfdsfs'
+    }));
 const op = Sequelize.Op;
 
 const model = {};
@@ -41,7 +48,7 @@ model.Sequelize = Sequelize;
 model.sequelize = sequelize;
 model.op = op;
 model.users = require('../model/User')(sequelize, Sequelize);
-model.locations = require('../model/Location')(sequelize, Sequelize);
-model.users.hasMany(model.locations);
-model.locations.belongsTo(model.users);
+model.symptom = require('../model/Symptom')(sequelize, Sequelize);
+model.users.belongsTo(model.symptom);
+model.symptom.hasOne(model.users);
 module.exports = model;

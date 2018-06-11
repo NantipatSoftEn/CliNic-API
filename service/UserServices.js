@@ -1,11 +1,20 @@
 const model = require('../config/sequelize')
 
+// exports.index = function (req, res) {
+//   model.users.findAll().then(result => {
+//     res.json(result);
+//   })
+// };
+
 exports.index = function (req, res) {
-  model.users.findAll().then(result => {
+  model.users.findAll({
+    include: [
+      {model: model.locations}
+    ]
+  }).then(result => {
     res.json(result);
   })
 };
-
 exports.new = function (req, res) {
   res.send('new forum');
 };
