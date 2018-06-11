@@ -1,9 +1,14 @@
-var express = require('express');
-var router = express.Router();
+var express  = require('express')
+var Resource = require('express-resource')
+var app = express();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+ //var router = express.Router();
 
-module.exports = router;
+var userController              = require('../service/UserServices');
+
+app.resource('test', userController);
+
+//app.resource('', );
+
+
+module.exports = app;
