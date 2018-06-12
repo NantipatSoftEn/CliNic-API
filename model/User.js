@@ -13,15 +13,14 @@ module.exports = (sequelize, DataTypes) => {
             field: 'name',
             type: DataTypes.STRING(191),
             primaryKey: false,
-            allowNull: true,
+            allowNull: false,
             autoIncrement: false,
         },
         lastname: {
             field: 'password',
             type: DataTypes.STRING(191),
             primaryKey: false,
-            allowNull: true,
-
+            allowNull: false,
         },
         telephone: {
             field: 'telephone',
@@ -32,25 +31,25 @@ module.exports = (sequelize, DataTypes) => {
         gender: {
             field: 'gender',
             type: DataTypes.ENUM('male', 'female'),
-            allowNull: true,
+            allowNull: false,
         },
         symptomId: {
             field: 'symptom_id',
             type: DataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
-            allowNull: true,
+            allowNull: false ,
         },
         typeUser: {
             field: 'typeuser',
             type: DataTypes.INTEGER(1),
             primaryKey: false,
-            allowNull: true,
+            allowNull:false,
         },
         status: {
             field: 'status',
             type: DataTypes.STRING(1),
             primaryKey: false,
-            allowNull: true,
+            allowNull: false,
         },
         createdAt: {
             field: 'created_at',
