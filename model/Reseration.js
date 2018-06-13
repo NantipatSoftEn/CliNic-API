@@ -16,14 +16,15 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             autoIncrement: false,
         },
+        userId:{
+            field:'user_id',
+            type:DataTypes.INTEGER(10).UNSIGNED,
+            primaryKey:true,
+            allowNulll:false,
+            autoIncrement: false,
+        },
         periodId:{
             field: 'period_id',
-            type: DataTypes.INTEGER(10).UNSIGNED,
-            primaryKey: true,
-            allowNull: false 
-        },
-        userId:{
-            field: 'user_id',
             type: DataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
             allowNull: false 
