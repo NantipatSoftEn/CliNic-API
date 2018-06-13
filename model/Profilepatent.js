@@ -14,7 +14,10 @@ module.exports = (sequelize, DataTypes) => {
             type:DataTypes.INTEGER(10).UNSIGNED,
             primaryKey:true,
             allowNulll:false,
-            autoIncrement: false,
+            references: {
+                model: "users",
+                key: "id"
+            }
         },
         medicineId:{
             field: 'medicine_id',
@@ -25,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
         diagnose:{
             field: 'diagnose',
             type: DataTypes.STRING(191),
-            primaryKey: false,
+            primaryKey: true,
             allowNull: false 
         },
         createdAt: {

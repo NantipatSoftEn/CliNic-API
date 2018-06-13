@@ -22,6 +22,10 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey:true,
             allowNulll:false,
             autoIncrement: false,
+            references: {
+                model: "users",
+                key: "id"
+            }
         },
         periodId:{
             field: 'period_id',

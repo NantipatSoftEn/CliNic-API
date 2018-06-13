@@ -45,8 +45,8 @@ sequelize.authenticate()
     .then(() => model.reseration.create({
         id: '',
         queue: 1,
-        periodId: 1,
         userId: 1, 
+        periodId: 1,
         createdAt: '',
         updatedAt: ''
     }))
@@ -96,7 +96,7 @@ model.symptom.hasOne(model.users); //  take symptomId to users
 model.reseration.belongsTo(model.period);
 model.period.hasMany(model.reseration); //  take periodId to reseration
 
-model.reseration.belongsTo(model.users);
+ model.reseration.belongsTo(model.users);
 model.users.hasMany(model.reseration); // take userId to reseration
 
 model.users.belongsTo(model.profilepatent);
