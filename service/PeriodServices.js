@@ -8,11 +8,7 @@
 const model = require('../config/sequelize')
 
 exports.index = function (req, res) {
-  model.users.findAll({
-    include: [{
-      model: model.symptom
-    }]
-  }).then(result => {
+  model.period.findAll().then(result => {
     res.json(result);
   })
 };
@@ -22,24 +18,18 @@ exports.new = function (req, res) {
 };
 
 exports.create = function (req, res) {
-  model.users.create({
+   model.period.create({
     id: '',
-    name: req.body.name,
-    lastname: req.body.lastname,
-    telephone: req.body.telephone,
-    gender: req.body.gender,
-    symptomId: req.body.symptomId,
-    typeUser: req.body.typeUser,
-    status: req.body.status,
+    periodName: req.body.periodName,
     createdAt: new Date(),
     updatedAt: new Date()
   })
 };
 
 exports.show = function (req, res) {
-  model.users.findAll({
+  model.period.findAll({
       where: {
-        id: req.params.user
+        id: req.params.period
       }
     })
     .then(result => {
@@ -52,26 +42,20 @@ exports.edit = function (req, res) {
 };
 
 exports.update = function (req, res) {
-  model.users.update({
-    name: req.body.name,
-    lastname: req.body.lastname,
-    telephone: req.body.telephone,
-    gender: req.body.gender,
-    symptomId: req.body.symptomId,
-    typeUser: req.body.typeUser,
-    status: req.body.status,
+  model.period.update({
+    periodName: req.body.periodName,
     updatedAt: new Date()
   }, {
     where: {
-      id: req.params.user
+      id: req.params.period
     }
   })
 };
 
 exports.destroy = function (req, res) {
-  model.users.destroy({
+  model.period.destroy({
     where: {
-      id: req.params.user
+      id: req.params.period
     }
   });
 

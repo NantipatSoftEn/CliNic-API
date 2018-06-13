@@ -8,11 +8,7 @@
 const model = require('../config/sequelize')
 
 exports.index = function (req, res) {
-  model.users.findAll({
-    include: [{
-      model: model.symptom
-    }]
-  }).then(result => {
+  model.symptom.findAll().then(result => {
     res.json(result);
   })
 };
@@ -22,24 +18,19 @@ exports.new = function (req, res) {
 };
 
 exports.create = function (req, res) {
-  model.users.create({
+  return model.symptom.create({
     id: '',
-    name: req.body.name,
-    lastname: req.body.lastname,
-    telephone: req.body.telephone,
-    gender: req.body.gender,
-    symptomId: req.body.symptomId,
-    typeUser: req.body.typeUser,
-    status: req.body.status,
+    symptomname: 'headage',
+    other: 'sdfdsfs',
     createdAt: new Date(),
     updatedAt: new Date()
   })
 };
 
 exports.show = function (req, res) {
-  model.users.findAll({
+  model.symptom.findAll({
       where: {
-        id: req.params.user
+        id: req.params.symptom
       }
     })
     .then(result => {
@@ -52,26 +43,21 @@ exports.edit = function (req, res) {
 };
 
 exports.update = function (req, res) {
-  model.users.update({
-    name: req.body.name,
-    lastname: req.body.lastname,
-    telephone: req.body.telephone,
-    gender: req.body.gender,
-    symptomId: req.body.symptomId,
-    typeUser: req.body.typeUser,
-    status: req.body.status,
+  model.symptom.update({
+    symptomname: 'headage',
+    other: 'sdfdsfs',
     updatedAt: new Date()
   }, {
     where: {
-      id: req.params.user
+      id: req.params.symptom
     }
   })
 };
 
 exports.destroy = function (req, res) {
-  model.users.destroy({
+  model.symptom.destroy({
     where: {
-      id: req.params.user
+      id: req.params.symptom
     }
   });
 

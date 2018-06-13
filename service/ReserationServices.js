@@ -10,7 +10,8 @@ const model = require('../config/sequelize')
 exports.index = function (req, res) {
   model.reseration.findAll({
     include: [{
-      model: model.users
+      model: model.users,
+      model: model.period
     }]
   }).then(result => {
     res.json(result);
@@ -22,24 +23,20 @@ exports.new = function (req, res) {
 };
 
 exports.create = function (req, res) {
-  return model.users.create({
+  model.reseration.create({
     id: '',
-    name: req.body.name,
-    lastname: req.body.lastname,
-    telephone: req.body.telephone,
-    gender: req.body.gender,
-    symptomId: req.body.symptomId,
-    typeUser: req.body.typeUser,
-    status: req.body.status,
+    queue: req.body.queue,
+    userId: req.body.userId,
+    periodId: req.body.periodId,
     createdAt: new Date(),
     updatedAt: new Date()
   })
 };
 
 exports.show = function (req, res) {
-  model.users.findAll({
+  model.reseration.findAll({
       where: {
-        id: req.params.user
+        id: req.params.reseration
       }
     })
     .then(result => {
@@ -52,14 +49,10 @@ exports.edit = function (req, res) {
 };
 
 exports.update = function (req, res) {
-  model.users.update({
-    name: req.body.name,
-    lastname: req.body.lastname,
-    telephone: req.body.telephone,
-    gender: req.body.gender,
-    symptomId: req.body.symptomId,
-    typeUser: req.body.typeUser,
-    status: req.body.status,
+  model.reseration.update({
+    queue: req.body.queue,
+    userId: req.body.userId,
+    periodId: req.body.periodId,
     updatedAt: new Date()
   }, {
     where: {
@@ -69,9 +62,9 @@ exports.update = function (req, res) {
 };
 
 exports.destroy = function (req, res) {
-  model.users.destroy({
+  model.reseration.destroy({
     where: {
-      id: req.params.user
+      id: req.params.reseration
     }
   });
 

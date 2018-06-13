@@ -8,9 +8,9 @@
 const model = require('../config/sequelize')
 
 exports.index = function (req, res) {
-  model.users.findAll({
+  model.profilepatent.findAll({
     include: [{
-      model: model.symptom
+      model: model.medicine
     }]
   }).then(result => {
     res.json(result);
@@ -22,24 +22,20 @@ exports.new = function (req, res) {
 };
 
 exports.create = function (req, res) {
-  model.users.create({
+   model.profilepatent.create({
     id: '',
-    name: req.body.name,
-    lastname: req.body.lastname,
-    telephone: req.body.telephone,
-    gender: req.body.gender,
-    symptomId: req.body.symptomId,
-    typeUser: req.body.typeUser,
-    status: req.body.status,
+    userId: req.body.userId,   
+    medicineId: req.body.medicineId,
+    diagnose: req.body.diagnose, 
     createdAt: new Date(),
     updatedAt: new Date()
   })
 };
 
 exports.show = function (req, res) {
-  model.users.findAll({
+  model.profilepatent.findAll({
       where: {
-        id: req.params.user
+        id: req.params.profilepatent
       }
     })
     .then(result => {
@@ -52,26 +48,22 @@ exports.edit = function (req, res) {
 };
 
 exports.update = function (req, res) {
-  model.users.update({
-    name: req.body.name,
-    lastname: req.body.lastname,
-    telephone: req.body.telephone,
-    gender: req.body.gender,
-    symptomId: req.body.symptomId,
-    typeUser: req.body.typeUser,
-    status: req.body.status,
+  model.profilepatent.update({
+    userId: req.body.userId,   
+    medicineId: req.body.medicineId,
+    diagnose: req.body.diagnose, 
     updatedAt: new Date()
   }, {
     where: {
-      id: req.params.user
+      id: req.params.profilepatent
     }
   })
 };
 
 exports.destroy = function (req, res) {
-  model.users.destroy({
+  model.profilepatent.destroy({
     where: {
-      id: req.params.user
+      id: req.params.profilepatent
     }
   });
 
