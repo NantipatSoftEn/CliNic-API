@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
         medicineName:{
             field: 'medicine_name',
             type: DataTypes.STRING(191),
-            primaryKey: true,
+            primaryKey: false,
             allowNull: false 
         },
         createdAt: {

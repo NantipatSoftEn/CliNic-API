@@ -23,9 +23,9 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false 
         },
         diagnose:{
-            field: 'medicine_id',
+            field: 'diagnose',
             type: DataTypes.STRING(191),
-            primaryKey: true,
+            primaryKey: false,
             allowNull: false 
         },
         createdAt: {
