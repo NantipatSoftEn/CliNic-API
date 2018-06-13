@@ -1,7 +1,7 @@
 'use strict'
 
 module.exports = (sequelize, DataTypes) => {
-    return sequelize.define('users', {
+    return sequelize.define('user', {
         id: {
             field: 'id',
             type: DataTypes.INTEGER(10).UNSIGNED,

@@ -4,9 +4,11 @@ var app = express();
 
  //var router = express.Router();
 
-var userController              = require('../service/UserServices');
+var userServices          = require('../service/UserServices');
+var reserationServices = require('../service/ReserationServices');
 
-app.resource('user', userController);
+app.resource('user', userServices );
+app.resource('reseration',  reserationServices );
 
 //app.resource('', );
 
