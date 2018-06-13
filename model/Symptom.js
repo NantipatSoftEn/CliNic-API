@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
             field: 'symptomname',
             type: DataTypes.STRING(191),
             primaryKey: false,
-            // allowNull: false,
+            allowNull: false,
             autoIncrement: false,
         },
         other:{
@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
             field: 'created_at',
             type: DataTypes.DATE,
             primaryKey: false,
-         
+            autoIncrement: false,
         },
         updatedAt: {
             field: 'updated_at',

@@ -1,7 +1,7 @@
 'use strict'
 
 module.exports = (sequelize, DataTypes) => {
-    return sequelize.define('users', {
+    return sequelize.define('user', {
         id: {
             field: 'id',
             type: DataTypes.INTEGER(10).UNSIGNED,
@@ -21,13 +21,12 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(191),
             primaryKey: false,
             allowNull: false,
-
         },
         telephone: {
             field: 'telephone',
             type: DataTypes.STRING(191),
             primaryKey: false,
-            allowNull: false,
+            allowNull: true,
         },
         gender: {
             field: 'gender',
@@ -38,13 +37,13 @@ module.exports = (sequelize, DataTypes) => {
             field: 'symptom_id',
             type: DataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
-            allowNull: false,
+            allowNull: false ,
         },
         typeUser: {
             field: 'typeuser',
             type: DataTypes.INTEGER(1),
             primaryKey: false,
-            allowNull: false,
+            allowNull:false,
         },
         status: {
             field: 'status',
