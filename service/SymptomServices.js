@@ -49,7 +49,7 @@ exports.update = function (req, res) {
     updatedAt: new Date()
   }, {
     where: {
-      id: req.params.user
+      id: req.params.symptom
     }
   })
 };

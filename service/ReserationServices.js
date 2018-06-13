@@ -23,10 +23,10 @@ exports.new = function (req, res) {
 };
 
 exports.create = function (req, res) {
-  return model.reseration.create({
+  model.reseration.create({
     id: '',
     queue: req.body.queue,
-    userId: req.body.userId, 
+    userId: req.body.userId,
     periodId: req.body.periodId,
     createdAt: new Date(),
     updatedAt: new Date()
@@ -51,7 +51,7 @@ exports.edit = function (req, res) {
 exports.update = function (req, res) {
   model.reseration.update({
     queue: req.body.queue,
-    userId: req.body.userId, 
+    userId: req.body.userId,
     periodId: req.body.periodId,
     updatedAt: new Date()
   }, {

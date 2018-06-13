@@ -22,7 +22,7 @@ exports.new = function (req, res) {
 };
 
 exports.create = function (req, res) {
-  return model.users.create({
+  model.users.create({
     id: '',
     name: req.body.name,
     lastname: req.body.lastname,
