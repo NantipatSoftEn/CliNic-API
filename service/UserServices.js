@@ -40,7 +40,10 @@ exports.show = function (req, res) {
   model.users.findAll({
       where: {
         id: req.params.user
-      }
+      },
+      include: [{
+        model: model.symptom
+      }]
     })
     .then(result => {
       res.json(result);

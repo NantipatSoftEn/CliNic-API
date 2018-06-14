@@ -36,7 +36,10 @@ exports.show = function (req, res) {
   model.profilepatent.findAll({
       where: {
         id: req.params.profilepatent
-      }
+      },
+      include: [{
+        model: model.medicine
+      }]
     })
     .then(result => {
       res.json(result);
