@@ -37,7 +37,11 @@ exports.show = function (req, res) {
   model.reseration.findAll({
       where: {
         id: req.params.reseration
-      }
+      },
+      include: [{
+        model: model.users,
+        model: model.period
+      }]
     })
     .then(result => {
       res.json(result);
