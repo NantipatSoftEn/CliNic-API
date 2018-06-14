@@ -10,7 +10,7 @@ var sysmptom = ['allergy',
   'chicken pox'
 ];
 
-var data =[];
+var data = [];
 for (var i = 0; i < sysmptom.length; i++) {
   var sysmptomRamdom = sysmptom[Math.floor(Math.random() * sysmptom.length)];
   data[i] = {
