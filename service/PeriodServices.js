@@ -5,7 +5,7 @@
 // GET     /forums/:forum/edit  ->  edit     show form edit
 // PUT     /forums/:forum       ->  update   update data
 // DELETE  /forums/:forum       ->  destroy
-const model = require('../config/sequelize')
+const model = require('../configdb/sequelize')
 
 exports.index = function (req, res) {
   model.period.findAll().then(result => {
