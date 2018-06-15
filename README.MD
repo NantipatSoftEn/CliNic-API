@@ -27,6 +27,51 @@ npm test ก่อนเพื่อให้ sequelizejs sync table ลง serv
     sequelize seed:create --name my-seed-file
 ```
 
+## How to get API 
+> ใช้ route resource รูปแบบมีดังนี้  
+ ```javascript
+var userServices = require('../service/UserServices');
+app.resource('user', userServices);
+```
+
+ ```javascript
+// GET     /forums              ->  index    หน้า list
+// GET     /forums/new          ->  new      show form html ให้กรอกข้อมูล
+// POST    /forums              ->  create   รับจาก form แบบ post
+// GET     /forums/:forum       ->  show     แสดงข้อมูลที่ ละ 1
+// GET     /forums/:forum/edit  ->  edit     show form edit
+// PUT     /forums/:forum       ->  update   update data
+// DELETE  /forums/:forum       ->  destroy
+exports.index = function(req, res){
+      res.send('forum index');
+    };
+
+    exports.new = function(req, res){
+      res.send('new forum');
+    };
+
+    exports.create = function(req, res){
+      res.send('create forum');
+    };
+
+    exports.show = function(req, res){
+      res.send('show forum ' + req.params.user);
+    };
+
+    exports.edit = function(req, res){
+      res.send('edit forum ' + req.params.user);
+    };
+
+    exports.update = function(req, res){
+      res.send('update forum ' + req.params.user);
+    };
+
+    exports.destroy = function(req, res){
+      res.send('destroy forum ' + req.params.user);
+    };
+```
+>  req.params.  ตั้งชื่อ route ว่ายังไง  req.params. ก็จะชื่อตาม route ตอนส่ง Id 
+example   route ชื่อ  facebook  จะเป็น req.param.facebook
 ## memo  devolopment packed
 ```sh
      npm install -g express-generator
@@ -37,6 +82,7 @@ npm test ก่อนเพื่อให้ sequelizejs sync table ลง serv
      npm install --save mysql2
      npm install cors
      npm install -g body-parser
+     npm install express-resource
 ```
  > config scripts   "test": "nodemon ./bin/www"
 
