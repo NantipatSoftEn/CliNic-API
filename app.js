@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var cors = require('cors')
 var logger = require('morgan');
 var bodyParser = require('body-parser');
-const model = require('./config/sequelize');
+const model = require('./configdb/sequelize');
 var indexRouter = require('./routes/index');
 
 
