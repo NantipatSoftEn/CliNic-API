@@ -72,6 +72,15 @@ exports.index = function(req, res){
 ```
 >  req.params.  ตั้งชื่อ route ว่ายังไง  req.params. ก็จะชื่อตาม route ตอนส่ง Id 
 example   route ชื่อ  facebook  จะเป็น req.param.facebook
+
+### example URL
+```
+http://localhost:3000/user
+http://localhost:3000/user/1
+http://localhost:3000/user/1/edit
+
+```
+
 ## memo  devolopment packed
 ```sh
      npm install -g express-generator
