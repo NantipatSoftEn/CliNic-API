@@ -10,7 +10,7 @@ const sequelize = new Sequelize(config.server, config.username, config.password,
 });
 
 
-
+sequelize.sync()
 const op = Sequelize.Op;
 
 const model = {};
