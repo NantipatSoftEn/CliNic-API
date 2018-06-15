@@ -89,6 +89,7 @@ http://localhost:3000/user/1/edit
      npm install --save sequelize
      npm install sequelize-cli -g (ให้สามารถใช้แบบ cmd ได้) 
      sequelize init
+     sequelize seed:create --name my-seed-file
      npm install --save mysql2
      npm install cors
      npm install -g body-parser
