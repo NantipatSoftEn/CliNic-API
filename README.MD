@@ -86,6 +86,7 @@ http://localhost:3000/user/1/edit
      npm install -g express-generator
      express --view=hbs
      npm install -g nodemon
+     npm install --save sequelize
      npm install sequelize-cli -g (ให้สามารถใช้แบบ cmd ได้) 
      sequelize init
      npm install --save mysql2
