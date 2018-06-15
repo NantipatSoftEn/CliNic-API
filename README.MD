@@ -94,6 +94,7 @@ http://localhost:3000/user/1/edit
      npm install cors
      npm install -g body-parser
      npm install express-resource
+     npm install faker
 ```
  > config scripts   "test": "nodemon ./bin/www"
 
