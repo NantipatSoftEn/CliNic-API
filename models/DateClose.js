@@ -12,13 +12,13 @@ module.exports = (sequelize, DataTypes) => {
         date:{
             field: 'date',
             type: DataTypes.DATE,
-            rimaryKey: false,
+            primaryKey: false,
             autoIncrement: false,
         },
         house:{
             field: 'house',
             type: DataTypes.TIME,
-            rimaryKey: false,
+            primaryKey: false,
             autoIncrement: false,
         },
         createdAt: {
