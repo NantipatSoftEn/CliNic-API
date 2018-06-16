@@ -38,6 +38,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
             allowNull: false ,
+            references: {
+                model: "symptoms",
+                key: "id"
+            }
         },
         typeUser: {
             field: 'typeuser',
