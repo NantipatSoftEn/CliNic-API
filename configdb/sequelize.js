@@ -12,12 +12,12 @@ const sequelize = new Sequelize('clinic', 'root', '', {
 
 sequelize.sync()
     .then(() => model.symptom.create({
-        id: '',
+        id: 1,
         symptomname: 'headage',
         other: 'sdfdsfs'
     }))
     .then(() => model.users.create({
-        id: '',
+        id: 1,
         name: 'arm',
         lastname: 'horyshit',
         telephone: '08878',
@@ -29,7 +29,7 @@ sequelize.sync()
         updatedAt: ''
     }))
     .then(() => model.period.create({
-        id: '',
+        id: 1,
         periodTime: '2012-06-18 16:26:21',
         maxUser: 10,
         countUser: 2,
@@ -37,7 +37,7 @@ sequelize.sync()
         updatedAt: ''
     }))
     .then(() => model.reseration.create({
-        id: '',
+        id: 1,
         queue: 1,
         userId: 1,
         periodId: 1,
@@ -45,20 +45,20 @@ sequelize.sync()
         updatedAt: ''
     }))
     .then(() => model.dateclose.create({
-        id: '',
+        id: 1,
         date: '2012-06-18 16:26:21',
         house: '16:26:21',
         createdAt: '',
         updatedAt: ''
     }))
     .then(() => model.medicine.create({
-        id: '',
+        id: 1,
         medicineName: 'parasettamal',
         createdAt: '',
         updatedAt: ''
     }))
     .then(() => model.profilepatent.create({
-        id: '',
+        id: 1,
         userId: 1,
         medicineId: 1,
         diagnose: 'Not ok',
