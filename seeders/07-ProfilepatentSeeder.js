@@ -7,7 +7,7 @@ for (var i = 0; i < 10; i++) {
   var user_idRandom = user_id[Math.floor(Math.random() * user_id.length)];
   var medicine_idRandom = medicine_id[Math.floor(Math.random() * medicine_id.length)];
   data[i] = {
-    id: '',
+    id: i,
     user_id: user_idRandom,
     medicine_id: medicine_idRandom,
     diagnose: faker.lorem.sentence(),
