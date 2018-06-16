@@ -19,7 +19,7 @@ const model = {};
 model.Sequelize = Sequelize;
 model.sequelize = sequelize;
 model.op = op;
-//sequelize.sync()
+sequelize.sync()
 
 
 model.reseration = require('../models/Reseration')(sequelize, Sequelize);
