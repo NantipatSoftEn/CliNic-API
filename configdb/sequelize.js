@@ -46,60 +46,6 @@ model.medicine.hasMany(model.profilepatent); //  take medicineId to profilepaten
 
 
 sequelize.sync()
-    .then(() => model.symptom.create({
-        id: 1,
-        symptomname: 'headage',
-        other: 'sdfdsfs'
-    }))
-    .then(() => model.users.create({
-        id: 1,
-        name: 'arm',
-        lastname: 'horyshit',
-        telephone: '08878',
-        gender: 'male',
-        symptomId: 1,
-        typeUser: 1,
-        status: 1,
-        createdAt: '',
-        updatedAt: ''
-    }))
-    .then(() => model.period.create({
-        id: 1,
-        periodTime: '2012-06-18 16:26:21',
-        maxUser: 10,
-        countUser: 2,
-        createdAt: '',
-        updatedAt: ''
-    }))
-    .then(() => model.reseration.create({
-        id: 1,
-        queue: 1,
-        userId: 1,
-        periodId: 1,
-        createdAt: '',
-        updatedAt: ''
-    }))
-    .then(() => model.dateclose.create({
-        id: 1,
-        date: '2012-06-18 16:26:21',
-        house: '16:26:21',
-        createdAt: '',
-        updatedAt: ''
-    }))
-    .then(() => model.medicine.create({
-        id: 1,
-        medicineName: 'parasettamal',
-        createdAt: '',
-        updatedAt: ''
-    }))
-    .then(() => model.profilepatent.create({
-        id: 1,
-        userId: 1,
-        medicineId: 1,
-        diagnose: 'Not ok',
-        createdAt: '',
-        updatedAt: ''
-    }))
 
-    
+
 module.exports = model;
