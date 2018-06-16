@@ -14,7 +14,7 @@ var data = [];
 for (var i = 0; i < sysmptom.length; i++) {
   var sysmptomRamdom = sysmptom[Math.floor(Math.random() * sysmptom.length)];
   data[i] = {
-    id: i,
+    id:'',
     symptomname: sysmptomRamdom,
     other: faker.lorem.sentence(),
     created_at: new Date(),

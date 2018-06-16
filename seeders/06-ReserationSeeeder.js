@@ -12,7 +12,7 @@ for (var i = 0; i < 10; i++) {
   var user_idRandom = user_id[Math.floor(Math.random() * user_id.length)];
   var period_idRandom = period_id[Math.floor(Math.random() * period_id.length)];
   data[i] = {
-    id: i,
+    id: '',
     queue: i,
     user_id: user_idRandom,
     period_id: period_idRandom,
