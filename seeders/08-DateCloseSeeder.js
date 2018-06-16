@@ -2,7 +2,7 @@
 var data = [];
 for (var i = 0; i < 5; i++) {
   data[i] = {
-    id: '',
+    
     date: new Date(),
     house:'16:26:2'+i,
     created_at: new Date(),

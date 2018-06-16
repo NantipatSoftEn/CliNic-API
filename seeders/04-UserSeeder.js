@@ -15,7 +15,7 @@ for(var i=0;i<5;i++){
   var typeUserRamdom = typeUser[Math.floor(Math.random()*typeUser.length)];
   var statusRamdom = status[Math.floor(Math.random()*status.length)];
    data[i] = {
-    id: '',
+  
     name: faker.name.firstName(),
     lastname: faker.name.lastName(),
     telephone: faker.phone.phoneNumber(),

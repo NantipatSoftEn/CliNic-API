@@ -9,7 +9,7 @@ for (var i = 0; i < 5; i++) {
   var max_userRamdom = max_user[Math.floor(Math.random() * max_user.length)];
   var count_userRamdom = count_user[Math.floor(Math.random() * count_user.length)];
   data[i] = {
-    id: '',
+  
     period_time: new Date(),
     max_user: max_userRamdom,
     count_user: count_userRamdom,

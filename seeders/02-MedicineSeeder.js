@@ -15,7 +15,7 @@ var medicine_name = ['adhesive plaster',
 for (var i = 0; i < medicine_name.length; i++) {
   var medicine_nameRamdom = medicine_name[Math.floor(Math.random() * medicine_name.length)];
   data[i] = {
-    id: '',
+  
     medicine_name: medicine_nameRamdom,
     created_at: new Date(),
     updated_at: new Date()
