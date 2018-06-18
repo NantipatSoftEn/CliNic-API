@@ -1,7 +1,7 @@
 'use strict';
 const config = require('./config');
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('clinic', 'root', 'root', {
+const sequelize = new Sequelize('clinic', 'root', null, {
     host: 'localhost',
     dialect: 'mysql',
     define: {
