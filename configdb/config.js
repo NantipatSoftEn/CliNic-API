@@ -6,7 +6,7 @@ const type = 'clinic';
 // exports.server = type === 'dev' ? 'dev' : 'node';
 exports.server = type;
 exports.username = 'root';
-exports.password = null;
+exports.password = "";
 /* port
     production: 3000,
     develop: 7000
