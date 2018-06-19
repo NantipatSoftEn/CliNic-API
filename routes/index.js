@@ -18,7 +18,7 @@ app.resource('symptom', symptomServices);
 app.resource('profilepatent', profilepatentServices);
 app.resource('medicine', medicineServices);
 app.resource('period',  periodServices);
-app.resource('dateclose', medicineServices);
+app.resource('dateclose', datecloseServices);
 //app.resource('', );
 
 
