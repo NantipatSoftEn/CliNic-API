@@ -20,7 +20,9 @@ exports.new = function (req, res) {
 exports.create =  async function (req, res) {
   await model.period.create({
     id: '',
-    periodName: req.body.periodName,
+    periodTime: req.body.periodTime,
+    maxUser:req.body.maxUser,
+    countUser: req.body.countUser,
     createdAt: new Date(),
     updatedAt: new Date()
   }).then(result => {
@@ -46,6 +48,8 @@ exports.edit = function (req, res) {
 exports.update =  async function (req, res) {
   await model.period.update({
     periodName: req.body.periodName,
+    maxUser:req.body.maxUser,
+    countUser: req.body.countUser,
     updatedAt: new Date()
   }, {
     where: {
