@@ -17,12 +17,14 @@ exports.new = function (req, res) {
   res.send('new forum');
 };
 
-exports.create = function (req, res) {
-   model.medicine.create({
+exports.create =  async function (req, res) {
+  await model.medicine.create({
     id: '',
     medicineName: req.body.medicineName,
     createdAt: new Date(),
     updatedAt: new Date()
+  }).then(result => {
+    res.send("sucess");
   })
 };
 
@@ -41,22 +43,26 @@ exports.edit = function (req, res) {
   res.send('edit forum ' + req.params.forum);
 };
 
-exports.update = function (req, res) {
-  model.medicine.update({
+exports.update = async function (req, res) {
+  await model.medicine.update({
     medicineName: req.body.medicineName,
     updatedAt: new Date()
   }, {
     where: {
       id: req.params.medicine
     }
+  }).then(result => {
+    res.send("sucess");
   })
 };
 
-exports.destroy = function (req, res) {
-  model.medicine.destroy({
+exports.destroy = async function (req, res) {
+  await model.medicine.destroy({
     where: {
       id: req.params.medicine
     }
-  });
+  }).then(result => {
+    res.send("sucess");
+  })
 
 };
