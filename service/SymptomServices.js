@@ -17,13 +17,15 @@ exports.new = function (req, res) {
   res.send('new forum');
 };
 
-exports.create = function (req, res) {
-  return model.symptom.create({
+exports.create = async function (req, res) {
+  await model.symptom.create({
     id: '',
     symptomname: 'headage',
     other: 'sdfdsfs',
     createdAt: new Date(),
     updatedAt: new Date()
+  }).then(result => {
+    res.send("sucess");
   })
 };
 
@@ -38,12 +40,12 @@ exports.show = function (req, res) {
     })
 };
 
-exports.edit = function (req, res) {
+exports.edit =  function (req, res) {
   res.send('edit forum ' + req.params.forum);
 };
 
-exports.update = function (req, res) {
-  model.symptom.update({
+exports.update = async function (req, res) {
+  await model.symptom.update({
     symptomname: 'headage',
     other: 'sdfdsfs',
     updatedAt: new Date()
@@ -51,14 +53,18 @@ exports.update = function (req, res) {
     where: {
       id: req.params.symptom
     }
+  }).then(result => {
+    res.send("sucess");
   })
 };
 
-exports.destroy = function (req, res) {
-  model.symptom.destroy({
+exports.destroy =  async function (req, res) {
+  await model.symptom.destroy({
     where: {
       id: req.params.symptom
     }
-  });
+  }).then(result => {
+    res.send("sucess");
+  })
 
 };

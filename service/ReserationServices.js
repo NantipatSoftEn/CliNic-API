@@ -22,14 +22,16 @@ exports.new = function (req, res) {
   res.send('new forum');
 };
 
-exports.create = function (req, res) {
-  model.reseration.create({
+exports.create = async function (req, res) {
+  await model.reseration.create({
     id: '',
     queue: req.body.queue,
     userId: req.body.userId,
     periodId: req.body.periodId,
     createdAt: new Date(),
     updatedAt: new Date()
+  }).then(result => {
+    res.send("sucess");
   })
 };
 
@@ -52,8 +54,8 @@ exports.edit = function (req, res) {
   res.send('edit forum ' + req.params.forum);
 };
 
-exports.update = function (req, res) {
-  model.reseration.update({
+exports.update =  async function (req, res) {
+  await model.reseration.update({
     queue: req.body.queue,
     userId: req.body.userId,
     periodId: req.body.periodId,
@@ -62,14 +64,18 @@ exports.update = function (req, res) {
     where: {
       id: req.params.user
     }
+  }).then(result => {
+    res.send("sucess");
   })
 };
 
-exports.destroy = function (req, res) {
-  model.reseration.destroy({
+exports.destroy = async function (req, res) {
+  await model.reseration.destroy({
     where: {
       id: req.params.reseration
     }
-  });
+  }).then(result => {
+    res.send("sucess");
+  })
 
 };

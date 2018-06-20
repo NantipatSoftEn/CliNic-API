@@ -21,14 +21,16 @@ exports.new = function (req, res) {
   res.send('new forum');
 };
 
-exports.create = function (req, res) {
-   model.profilepatent.create({
+exports.create = async function (req, res) {
+  await model.profilepatent.create({
     id: '',
     userId: req.body.userId,   
     medicineId: req.body.medicineId,
     diagnose: req.body.diagnose, 
     createdAt: new Date(),
     updatedAt: new Date()
+  }).then(result => {
+    res.send("sucess");
   })
 };
 
@@ -50,8 +52,8 @@ exports.edit = function (req, res) {
   res.send('edit forum ' + req.params.forum);
 };
 
-exports.update = function (req, res) {
-  model.profilepatent.update({
+exports.update = async function (req, res) {
+  await model.profilepatent.update({
     userId: req.body.userId,   
     medicineId: req.body.medicineId,
     diagnose: req.body.diagnose, 
@@ -59,15 +61,19 @@ exports.update = function (req, res) {
   }, {
     where: {
       id: req.params.profilepatent
-    }
+    }.then(result => {
+      res.send("sucess");
+    })
   })
 };
 
-exports.destroy = function (req, res) {
-  model.profilepatent.destroy({
+exports.destroy = async function (req, res) {
+  await model.profilepatent.destroy({
     where: {
       id: req.params.profilepatent
     }
-  });
+  }).then(result => {
+    res.send("sucess");
+  })
 
 };

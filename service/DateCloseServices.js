@@ -17,13 +17,15 @@ exports.new = function (req, res) {
     res.send('new forum');
 };
 
-exports.create = function (req, res) {
-    model.dateclose.create({
+exports.create = async function (req, res) {
+    await model.dateclose.create({
         id: '',
         date: req.body.date,
         house: req.body.house,
         createdAt: new Date(),
         updatedAt: new Date()
+    }).then(result => {
+        res.send("sucess");
     })
 };
 
@@ -42,8 +44,8 @@ exports.edit = function (req, res) {
     res.send('edit forum ' + req.params.forum);
 };
 
-exports.update = function (req, res) {
-    model.dateclose.update({
+exports.update = async function (req, res) {
+    await model.dateclose.update({
         date: req.body.date,
         house: req.body.house,
         updatedAt: new Date()
@@ -51,14 +53,18 @@ exports.update = function (req, res) {
         where: {
             id: req.params.dateclose
         }
+    }).then(result => {
+        res.send("sucess");
     })
 };
 
-exports.destroy = function (req, res) {
-    model.dateclose.destroy({
+exports.destroy = async function (req, res) {
+    await model.dateclose.destroy({
         where: {
             id: req.params.dateclose
         }
-    });
+    }).then(result => {
+        res.send("sucess");
+    })
 
 };
