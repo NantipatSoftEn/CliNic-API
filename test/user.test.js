@@ -1,6 +1,6 @@
 var axios = require('axios');
 var crud = require('./crud');
-jest.setTimeout(30000);
+jest.setTimeout(5000);
 describe('CRUD Testing', () => {
     const url = `http://localhost:3000`
 

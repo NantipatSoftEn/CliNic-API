@@ -61,9 +61,9 @@ exports.update = async function (req, res) {
   }, {
     where: {
       id: req.params.profilepatent
-    }.then(result => {
-      res.send("sucess");
-    })
+    }
+  }).then(result => {
+    res.send("sucess");
   })
 };
 

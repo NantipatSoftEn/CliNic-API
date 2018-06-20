@@ -20,8 +20,8 @@ exports.new = function (req, res) {
 exports.create = async function (req, res) {
   await model.symptom.create({
     id: '',
-    symptomname: 'headage',
-    other: 'sdfdsfs',
+    symptomname: req.body.symptomname,
+    other: req.body.other,
     createdAt: new Date(),
     updatedAt: new Date()
   }).then(result => {
