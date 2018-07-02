@@ -12,6 +12,9 @@ var medicineServices = require('../service/MedicineServices');
 var periodServices = require('../service/PeriodServices');
 var datecloseServices = require('../service/DateCloseServices');
 
+const userController = require('../controller/userController');
+
+
 app.resource('user', userServices);
 app.resource('reseration', reserationServices);
 app.resource('symptom', symptomServices);
@@ -20,6 +23,6 @@ app.resource('medicine', medicineServices);
 app.resource('period',  periodServices);
 app.resource('dateclose', datecloseServices);
 //app.resource('', );
-
+// userController.findByTel
 
 module.exports = app;

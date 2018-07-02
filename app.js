@@ -7,6 +7,7 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 const model = require('./configdb/sequelize');
 var indexRouter = require('./routes/index');
+const rootRoutes = require('./routes/rootRoutes');
 
 
 var app = express();
@@ -16,8 +17,6 @@ app.use(cors())
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
@@ -25,6 +24,8 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use('/', indexRouter);
+rootRoutes(app);
+
 
 
 // catch 404 and forward to error handler

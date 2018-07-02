@@ -7,6 +7,8 @@
 // DELETE  /forums/:forum       ->  destroy
 const model = require('../configdb/sequelize')
 
+
+
 exports.index = function (req, res) {
   model.users.findAll({
     include: [{
@@ -79,3 +81,4 @@ exports.destroy = function (req, res) {
   });
 
 };
+
