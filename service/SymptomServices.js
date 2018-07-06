@@ -6,6 +6,7 @@
 // PUT     /forums/:forum       ->  update   update data
 // DELETE  /forums/:forum       ->  destroy
 const model = require('../configdb/sequelize')
+const tools = require('../utils/tools');
 
 exports.index = function (req, res) {
   model.symptom.findAll().then(result => {
@@ -22,8 +23,8 @@ exports.create = function (req, res) {
     id: '',
     symptomname: 'headage',
     other: 'sdfdsfs',
-    createdAt: new Date(),
-    updatedAt: new Date()
+    createdAt: tools.moment().format(),
+    updatedAt: tools.moment().format()
   })
 };
 
@@ -46,7 +47,7 @@ exports.update = function (req, res) {
   model.symptom.update({
     symptomname: 'headage',
     other: 'sdfdsfs',
-    updatedAt: new Date()
+    updatedAt: tools.moment().format()
   }, {
     where: {
       id: req.params.symptom

@@ -6,8 +6,7 @@
 // PUT     /forums/:forum       ->  update   update data
 // DELETE  /forums/:forum       ->  destroy
 const model = require('../configdb/sequelize')
-
-
+const tools = require('../utils/tools');
 
 exports.index = function (req, res) {
   model.users.findAll({
@@ -33,8 +32,8 @@ exports.create = function (req, res) {
     symptomId: req.body.symptomId,
     typeUser: req.body.typeUser,
     status: req.body.status,
-    createdAt: new Date(),
-    updatedAt: new Date()
+    createdAt: tools.moment().format(),
+    updatedAt: tools.moment().format()
   })
 };
 
@@ -65,7 +64,7 @@ exports.update = function (req, res) {
     symptomId: req.body.symptomId,
     typeUser: req.body.typeUser,
     status: req.body.status,
-    updatedAt: new Date()
+    updatedAt: tools.moment().format()
   }, {
     where: {
       id: req.params.user
