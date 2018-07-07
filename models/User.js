@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
             field: 'telephone',
             type: DataTypes.STRING(191),
             primaryKey: false,
-            allowNull: true,
+            allowNull: false,
         },
         gender: {
             field: 'gender',
@@ -37,7 +37,7 @@ module.exports = (sequelize, DataTypes) => {
             field: 'symptom_id',
             type: DataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
-            allowNull: false ,
+            allowNull: true ,
             references: {
                 model: "symptoms",
                 key: "id"
@@ -47,13 +47,13 @@ module.exports = (sequelize, DataTypes) => {
             field: 'typeuser',
             type: DataTypes.INTEGER(1),
             primaryKey: false,
-            allowNull:false,
+            allowNull: true,
         },
         status: {
             field: 'status',
             type: DataTypes.STRING(1),
             primaryKey: false,
-            allowNull: false,
+            allowNull: true,
         },
         createdAt: {
             field: 'created_at',
