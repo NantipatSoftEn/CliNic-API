@@ -1,8 +1,6 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower|Itim );
 
-a {
-  color: #00B7FF;
+body {
+  font-size: 18px 
+  font-family: 'Itim','Indie Flower', cursive;
 }
