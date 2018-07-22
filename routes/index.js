@@ -22,4 +22,7 @@ app.resource('dateclose',datecloseServices);
 //app.resource('', );
 
 
+app.get('/', function (req, res) {
+    res.render('index')
+  })
 module.exports = app;
