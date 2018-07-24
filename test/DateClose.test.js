@@ -2,7 +2,7 @@ var axios = require('axios');
 var crud = require('./crud');
 jest.setTimeout(5000);
 describe('CRUD Testing', () => {
-    const url = `http://localhost:3000`
+    const url = `http://localhost:3001`
 
     it('getAll have ErrorMessage', async () => {
         const res = await crud.index(`${url}/dateclose`);

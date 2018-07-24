@@ -2,7 +2,7 @@ var axios = require('axios');
 var crud = require('./crud');
 jest.setTimeout(5000);
 describe('CRUD Testing', () => {
-    const url = `http://localhost:3000`
+    const url = `http://localhost:3001`
 
     it('getAll have ErrorMessage', async () => {
         const res = await crud.index(`${url}/profilepatent`);
@@ -41,7 +41,7 @@ describe('CRUD Testing', () => {
     });
 
     it('destroy is Working', async () => {
-        const res = await crud.destroy(`${url}/profilepatent`, 2);
+        const res = await crud.destroy(`${url}/profilepatent`, 11);
         console.log(res.status);
         expect(res.status).toBe(200);
     });
