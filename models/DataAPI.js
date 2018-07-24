@@ -9,6 +9,12 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             autoIncrement: true,
         },
+        URL:{
+            field: 'url',
+            type: DataTypes.STRING(191),
+            primaryKey: false,
+            autoIncrement: false,
+        },
         Action:{
             field: 'action',
             type: DataTypes.STRING(191),
