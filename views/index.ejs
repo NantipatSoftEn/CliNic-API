@@ -12,8 +12,6 @@
         <table class="table table-dark">
             <thead>
                 <tr>
-         
-                
                     <th scope="col">URL</th>
                     <th scope="col">Action</th>
                     <th scope="col">Path Parameters</th>
@@ -22,24 +20,29 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td></td>
-                    <td>
-                        <button type="button" class="btn btn-success">GET</button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-info">
-                            Non-Required</button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-warning">200 Success</button>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            <textarea class="form-control" id="exampleTextarea" rows="23" cols="40"></textarea>
-                        </div>
-                    </td>
-                </tr>
+                <% for(var i=0; i<data.length; i++) {%>
+                    <tr>
+                        <td><%= data[i].URL%></td>
+                        <td>
+                            <button type="button" class="btn btn-success"><%= data[i].Action%>
+                            </button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-info">
+                                <%= data[i].PathParameters%></button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-warning"><%= data[i].Respone%></button>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <textarea class="form-control"  rows="23" cols="40" readonly>
+                                    <%= data[i].data%>
+                                </textarea>
+                            </div>
+                        </td>
+                    </tr>
+                <% } %>
             </tbody>
         </table>
     </div>
