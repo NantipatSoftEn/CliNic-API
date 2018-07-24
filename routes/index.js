@@ -11,6 +11,7 @@ var profilepatentServices = require('../service/ProfilePatentServices');
 var medicineServices = require('../service/MedicineServices');
 var periodServices = require('../service/PeriodServices');
 var datecloseServices = require('../service/DateCloseServices');
+var dataapiServices = require('../service/DataAPIServices');
 
 app.resource('user', userServices);
 app.resource('reseration', reserationServices);
@@ -19,10 +20,9 @@ app.resource('profilepatent', profilepatentServices);
 app.resource('medicine', medicineServices);
 app.resource('period',  periodServices);
 app.resource('dateclose',datecloseServices);
+app.resource('',dataapiServices);
 //app.resource('', );
 
 
-app.get('/', function (req, res) {
-    res.render('index')
-  })
+// app.get('/', dataapiServices.getDataAll())
 module.exports = app;
