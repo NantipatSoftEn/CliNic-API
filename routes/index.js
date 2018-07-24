@@ -24,5 +24,7 @@ app.resource('',dataapiServices);
 //app.resource('', );
 
 
-// app.get('/', dataapiServices.getDataAll())
+app.get('/meaning', function (req, res) {
+    res.render('meaning')
+  })
 module.exports = app;
