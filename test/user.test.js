@@ -40,13 +40,13 @@ describe('CRUD Testing', () => {
 
 
     it('edit is Working', async () => {
-        const res = await crud.update(`${url}/user`, 2, data);
+        const res = await crud.update(`${url}/user`, 1, data);
         console.log(res.status);
         expect(res.status).toBe(200);
     });
 
     it('destroy is Working', async () => {
-        const res = await crud.destroy(`${url}/user`, 22);
+        const res = await crud.destroy(`${url}/user`, 23);
         console.log(res.status);
         expect(res.status).toBe(200);
     });

@@ -1,8 +1,8 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-family : 'Itim','Indie Flower', cursive;
+  background-color: #1B2631 ;
+  color: #FDFEFE  ;
 }
 
-a {
-  color: #00B7FF;
-}
+

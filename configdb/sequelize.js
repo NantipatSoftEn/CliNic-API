@@ -11,6 +11,8 @@ const sequelize = new Sequelize(config.server, config.username, config.password,
 
 
 sequelize.sync()
+
+
 const op = Sequelize.Op;
 
 const model = {};
@@ -26,7 +28,7 @@ model.symptom = require('../models/Symptom')(sequelize, Sequelize);
 model.profilepatent = require('../models/Profilepatent')(sequelize, Sequelize);
 model.medicine = require('../models/Medicine')(sequelize, Sequelize);
 model.dateclose = require('../models/DateClose')(sequelize, Sequelize);
-
+model.dataapi = require('../models/DataAPI')(sequelize, Sequelize);
 
 model.users.belongsTo(model.symptom);
 model.symptom.hasOne(model.users); //  take symptomId to users
