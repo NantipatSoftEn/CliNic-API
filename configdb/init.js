@@ -53,4 +53,14 @@ sequelize.sync()
         createdAt: '',
         updatedAt: ''
     }))
+    .then(() => model.dataapi.create({
+        id: '',
+        Action: 'GET',
+        PathParameters: 'userId',
+        Respone: 'Not ok',
+        Data: 'test',
+        createdAt: '',
+        updatedAt: ''
+    }))
+    
 
