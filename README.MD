@@ -1,6 +1,11 @@
 # Clinic-Application Programming Interface
 > Use for Clinical Project only . 
 
+
+## Update 
+> ดู document api ได้ที่หน้า index
+
+
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
@@ -18,15 +23,11 @@
 - table period ช่วงเวลาที่หมอรับคนเข้าคิว
 - table reserration การจองของ user
 
-
-
-## Install Database
-npm test ก่อนเพื่อให้ sequelizejs sync table ลง serve ก่อนแล้วจึง seeder ตามไป
-```sh
-    npm test
-    sequelize seed:create --name my-seed-file
+## install 
 ```
-
+npm install 
+npm sequelize db:seed:all
+```
 ## How to get API 
 > ใช้ route resource รูปแบบมีดังนี้  
  ```javascript
@@ -79,22 +80,6 @@ http://localhost:3000/user
 http://localhost:3000/user/1
 http://localhost:3000/user/1/edit
 
-```
-
-## memo  devolopment packed
-```sh
-     npm install -g express-generator
-     express --view=hbs
-     npm install -g nodemon
-     npm install --save sequelize
-     npm install sequelize-cli -g (ให้สามารถใช้แบบ cmd ได้) 
-     sequelize init
-     sequelize seed:create --name my-seed-file
-     npm install --save mysql2
-     npm install cors
-     npm install -g body-parser
-     npm install express-resource
-     npm install faker
 ```
  > config scripts   "test": "nodemon ./bin/www"
 
