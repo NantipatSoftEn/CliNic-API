@@ -30,254 +30,201 @@ var pathparameters = [
                                   ];
 
                                   var dataReturn = [
-                                    `{
-                                  "id": 1,
-                                  "name": "arm",
-                                  "lastname": "horyshit",
-                                  "telephone": "08878",
-                                  "gender": "male",
-                                  "symptomId": 1,
-                                  "typeUser": 1,
-                                  "status": "1",
-                                  "createdAt": "2018-07-23T23:59:58.000Z",
-                                  "updatedAt": "2018-07-23T23:59:58.000Z",
-                                  "symptom": {
-                                      "id": 1,
-                                      "symptomname": "headage",
-                                      "other": "sdfdsfs",
-                                      "createdAt": "2018-07-23T23:58:09.000Z",
-                                      "updatedAt": "2018-07-23T23:58:09.000Z"
-                                  }'
-                                }`,
-                                    `{
-                                  "id": 1,
-                                  "name": "arm",
-                                  "lastname": "horyshit",
-                                  "telephone": "08878",
-                                  "gender": "male",
-                                  "symptomId": 1,
-                                  "typeUser": 1,
-                                  "status": "1",
-                                  "createdAt": "2018-07-23T23:59:58.000Z",
-                                  "updatedAt": "2018-07-23T23:59:58.000Z",
-                                  "symptom": {
-                                      "id": 1,
-                                      "symptomname": "headage",
-                                      "other": "sdfdsfs",
-                                      "createdAt": "2018-07-23T23:58:09.000Z",
-                                      "updatedAt": "2018-07-23T23:58:09.000Z"
-                                  }'
-                                }`,
-                                    `{
-                                  "id": 1,
-                                  "name": "arm",
-                                  "lastname": "horyshit",
-                                  "telephone": "08878",
-                                  "gender": "male",
-                                  "symptomId": 1,
-                                  "typeUser": 1,
-                                  "status": "1",
-                                  "createdAt": "2018-07-23T23:59:58.000Z",
-                                  "updatedAt": "2018-07-23T23:59:58.000Z",
-                                  "symptom": {
-                                      "id": 1,
-                                      "symptomname": "headage",
-                                      "other": "sdfdsfs",
-                                      "createdAt": "2018-07-23T23:58:09.000Z",
-                                      "updatedAt": "2018-07-23T23:58:09.000Z"
-                                  }'
-                                }`,
-                                    'sucess',
-                                    'sucess',
-                                    'sucess',
                                     ` {
+                                      "id": 1,
+                                      "name": "Kailyn",
+                                      "lastname": "Murazik",
+                                      "telephone": "(901) 987-6917",
+                                      "gender": "male",
+                                      "symptomId": 6,
+                                      "typeUser": 1,
+                                      "status": "2",
+                                      "createdAt": "2018-07-24T03:15:58.000Z",
+                                      "updatedAt": "2018-07-24T03:15:58.000Z",
+                                      "symptom": {
+                                          "id": 6,
+                                          "symptomname": "broken bone",
+                                          "other": "Animi ut vel quidem exercitationem.",
+                                          "createdAt": "2018-07-24T03:15:58.000Z",
+                                          "updatedAt": "2018-07-24T03:15:58.000Z"
+                                      }
+                                  }`, 
+                                  'success',
+                                  ` {
                                     "id": 1,
-                                    "symptomname": "appendicitis",
-                                    "other": "Placeat libero laudantium sit error quos dolorem.",
-                                    "createdAt": "2018-07-24T02:20:54.000Z",
-                                    "updatedAt": "2018-07-24T02:20:54.000Z"
-                                }`,
-                                    'sucess',
-                                    'sucess',
-                                    'sucess',
-                                    ` {
+                                    "name": "Kailyn",
+                                    "lastname": "Murazik",
+                                    "telephone": "(901) 987-6917",
+                                    "gender": "male",
+                                    "symptomId": 6,
+                                    "typeUser": 1,
+                                    "status": "2",
+                                    "createdAt": "2018-07-24T03:15:58.000Z",
+                                    "updatedAt": "2018-07-24T03:15:58.000Z",
+                                    "symptom": {
+                                        "id": 6,
+                                        "symptomname": "broken bone",
+                                        "other": "Animi ut vel quidem exercitationem.",
+                                        "createdAt": "2018-07-24T03:15:58.000Z",
+                                        "updatedAt": "2018-07-24T03:15:58.000Z"
+                                    }
+                                }`,'success','success' ,
+
+
+                                //  symptomname
+
+                                ` {
                                   "id": 1,
-                                  "queue": "0",
-                                  "userId": 2,
-                                  "periodId": 1,
-                                  "createdAt": "2018-07-24T02:20:55.000Z",
-                                  "updatedAt": "2018-07-24T02:20:55.000Z",
-                                  "period": {
-                                      "id": 1,
-                                      "periodTime": "2018-07-24T02:20:55.000Z",
-                                      "maxUser": 30,
-                                      "countUser": 8,
-                                      "createdAt": "2018-07-24T02:20:55.000Z",
-                                      "updatedAt": "2018-07-24T02:20:55.000Z"
-                                  }
-                                }`,
-                                    ` {
-                                  "id": 1,
-                                  "queue": "0",
-                                  "userId": 2,
-                                  "periodId": 1,
-                                  "createdAt": "2018-07-24T02:20:55.000Z",
-                                  "updatedAt": "2018-07-24T02:20:55.000Z",
-                                  "period": {
-                                      "id": 1,
-                                      "periodTime": "2018-07-24T02:20:55.000Z",
-                                      "maxUser": 30,
-                                      "countUser": 8,
-                                      "createdAt": "2018-07-24T02:20:55.000Z",
-                                      "updatedAt": "2018-07-24T02:20:55.000Z"
-                                  }
-                                }`,
-                                    ` {
-                                  "id": 1,
-                                  "queue": "0",
-                                  "userId": 2,
-                                  "periodId": 1,
-                                  "createdAt": "2018-07-24T02:20:55.000Z",
-                                  "updatedAt": "2018-07-24T02:20:55.000Z",
-                                  "period": {
-                                      "id": 1,
-                                      "periodTime": "2018-07-24T02:20:55.000Z",
-                                      "maxUser": 30,
-                                      "countUser": 8,
-                                      "createdAt": "2018-07-24T02:20:55.000Z",
-                                      "updatedAt": "2018-07-24T02:20:55.000Z"
-                                  }
-                                }`,
-                                    'sucess',
-                                    'sucess',
-                                    'sucess',
-                                    `"id": 1,
-                                "userId": 4,
-                                "medicineId": 5,
-                                "diagnose": "Saepe qui illum porro commodi.",
-                                "createdAt": "2018-07-24T02:20:55.000Z",
-                                "updatedAt": "2018-07-24T02:20:55.000Z",
-                                "medicine": {
-                                    "id": 5,
-                                    "medicineName": "vitamin",
-                                    "createdAt": "2018-07-24T02:20:55.000Z",
-                                    "updatedAt": "2018-07-24T02:20:55.000Z"
-                                }`,
-                                    `"id": 1,
-                                "userId": 4,
-                                "medicineId": 5,
-                                "diagnose": "Saepe qui illum porro commodi.",
-                                "createdAt": "2018-07-24T02:20:55.000Z",
-                                "updatedAt": "2018-07-24T02:20:55.000Z",
-                                "medicine": {
-                                    "id": 5,
-                                    "medicineName": "vitamin",
-                                    "createdAt": "2018-07-24T02:20:55.000Z",
-                                    "updatedAt": "2018-07-24T02:20:55.000Z"
-                                }`,
-                                    `"id": 1,
-                                "userId": 4,
-                                "medicineId": 5,
-                                "diagnose": "Saepe qui illum porro commodi.",
-                                "createdAt": "2018-07-24T02:20:55.000Z",
-                                "updatedAt": "2018-07-24T02:20:55.000Z",
-                                "medicine": {
-                                    "id": 5,
-                                    "medicineName": "vitamin",
-                                    "createdAt": "2018-07-24T02:20:55.000Z",
-                                    "updatedAt": "2018-07-24T02:20:55.000Z"
-                                }`,
-                                    'sucess',
-                                    'sucess',
-                                    'sucess',
-                                    `{
-                                  "id": 1,
-                                  "medicineName": "tweezers",
-                                  "createdAt": "2018-07-24T02:20:55.000Z",
-                                  "updatedAt": "2018-07-24T02:20:55.000Z"
-                                }`,
-                                    `{
-                                  "id": 1,
-                                  "medicineName": "tweezers",
-                                  "createdAt": "2018-07-24T02:20:55.000Z",
-                                  "updatedAt": "2018-07-24T02:20:55.000Z"
-                                }`,
-                                    `{
-                                  "id": 1,
-                                  "medicineName": "tweezers",
-                                  "createdAt": "2018-07-24T02:20:55.000Z",
-                                  "updatedAt": "2018-07-24T02:20:55.000Z"
-                                }`,
-                                    'sucess',
-                                    'sucess',
-                                    'sucess',
-                                    `{
-                                  "id": 1,
-                                  "periodTime": "2018-07-24T02:20:55.000Z",
-                                  "maxUser": 30,
+                                  "symptomname": "asthmatic",
+                                  "other": "Reprehenderit dolorem a dolorem consequatur.",
+                                  "createdAt": "2018-07-24T03:15:58.000Z",
+                                  "updatedAt": "2018-07-24T03:15:58.000Z"
+                              }` ,'success',
+                              `{
+                                "id": 1,
+                                "symptomname": "asthmatic",
+                                "other": "Reprehenderit dolorem a dolorem consequatur.",
+                                "createdAt": "2018-07-24T03:15:58.000Z",
+                                "updatedAt": "2018-07-24T03:15:58.000Z"
+                            }`,'success','success' ,
+
+
+
+
+                            //  reseration 
+
+
+                            `{
+                              "id": 1,
+                              "queue": "0",
+                              "userId": 4,
+                              "periodId": 3,
+                              "createdAt": "2018-07-24T03:40:55.000Z",
+                              "updatedAt": "2018-07-24T03:40:55.000Z",
+                              "period": {
+                                  "id": 3,
+                                  "periodTime": "2018-07-24T03:40:55.000Z",
+                                  "maxUser": 10,
                                   "countUser": 8,
-                                  "createdAt": "2018-07-24T02:20:55.000Z",
-                                  "updatedAt": "2018-07-24T02:20:55.000Z"
-                                }`,
-                                    `{
-                                    "id": 1,
-                                    "periodTime": "2018-07-24T02:20:55.000Z",
-                                    "maxUser": 30,
+                                  "createdAt": "2018-07-24T03:40:55.000Z",
+                                  "updatedAt": "2018-07-24T03:40:55.000Z"
+                              }`,'success' ,
+                              `{
+                                "id": 1,
+                                "queue": "0",
+                                "userId": 4,
+                                "periodId": 3,
+                                "createdAt": "2018-07-24T03:40:55.000Z",
+                                "updatedAt": "2018-07-24T03:40:55.000Z",
+                                "period": {
+                                    "id": 3,
+                                    "periodTime": "2018-07-24T03:40:55.000Z",
+                                    "maxUser": 10,
                                     "countUser": 8,
-                                    "createdAt": "2018-07-24T02:20:55.000Z",
-                                    "updatedAt": "2018-07-24T02:20:55.000Z"
-                                  }`,
-                                    `{
-                                    "id": 1,
-                                    "periodTime": "2018-07-24T02:20:55.000Z",
-                                    "maxUser": 30,
-                                    "countUser": 8,
-                                    "createdAt": "2018-07-24T02:20:55.000Z",
-                                    "updatedAt": "2018-07-24T02:20:55.000Z"
-                                  }`,
-                                    'sucess',
-                                    'sucess',
-                                    'sucess',
-                                    `{
+                                    "createdAt": "2018-07-24T03:40:55.000Z",
+                                    "updatedAt": "2018-07-24T03:40:55.000Z"
+                                }`,'success','success',
+
+                                // profilepatent
+
+                                `{
                                   "id": 1,
-                                  "date": "2018-07-24T02:20:55.000Z",
-                                  "house": "16:26:20",
-                                  "createdAt": "2018-07-24T02:20:55.000Z",
-                                  "updatedAt": "2018-07-24T02:20:55.000Z"
-                                }`,
-                                    `{
-                                  "id": 1,
-                                  "periodTime": "2018-07-24T02:20:55.000Z",
-                                  "maxUser": 30,
-                                  "countUser": 8,
-                                  "createdAt": "2018-07-24T02:20:55.000Z",
-                                  "updatedAt": "2018-07-24T02:20:55.000Z"
-                                }`,
-                                    `{
-                                  "id": 1,
-                                  "date": "2018-07-24T02:20:55.000Z",
-                                  "house": "16:26:20",
-                                  "createdAt": "2018-07-24T02:20:55.000Z",
-                                  "updatedAt": "2018-07-24T02:20:55.000Z"
-                                }`,
-                                    `{
-                                  "id": 1,
-                                  "periodTime": "2018-07-24T02:20:55.000Z",
-                                  "maxUser": 30,
-                                  "countUser": 8,
-                                  "createdAt": "2018-07-24T02:20:55.000Z",
-                                  "updatedAt": "2018-07-24T02:20:55.000Z"
-                                }`,
-                                    `{
-                                  "id": 1,
-                                  "date": "2018-07-24T02:20:55.000Z",
-                                  "house": "16:26:20",
-                                  "createdAt": "2018-07-24T02:20:55.000Z",
-                                  "updatedAt": "2018-07-24T02:20:55.000Z"
-                                }`,
-                                    'sucess',
-                                    'sucess',
-                                    'sucess'
+                                  "userId": 4,
+                                  "medicineId": 10,
+                                  "diagnose": "Deleniti enim commodi quod recusandae provident voluptatem molestiae voluptatibus dicta.",
+                                  "createdAt": "2018-07-24T03:46:26.000Z",
+                                  "updatedAt": "2018-07-24T03:46:26.000Z",
+                                  "medicine": {
+                                      "id": 10,
+                                      "medicineName": "antibacteria",
+                                      "createdAt": "2018-07-24T03:46:26.000Z",
+                                      "updatedAt": "2018-07-24T03:46:26.000Z"
+                                  }
+                              }`, 'success',
+                              `  {
+                                "id": 1,
+                                "userId": 4,
+                                "medicineId": 10,
+                                "diagnose": "Deleniti enim commodi quod recusandae provident voluptatem molestiae voluptatibus dicta.",
+                                "createdAt": "2018-07-24T03:46:26.000Z",
+                                "updatedAt": "2018-07-24T03:46:26.000Z",
+                                "medicine": {
+                                    "id": 10,
+                                    "medicineName": "antibacteria",
+                                    "createdAt": "2018-07-24T03:46:26.000Z",
+                                    "updatedAt": "2018-07-24T03:46:26.000Z"
+                                }
+                            }`,'success','success',
+
+
+                            //  medicine
+                            `  {
+                              "id": 1,
+                              "userId": 4,
+                              "medicineId": 10,
+                              "diagnose": "Deleniti enim commodi quod recusandae provident voluptatem molestiae voluptatibus dicta.",
+                              "createdAt": "2018-07-24T03:46:26.000Z",
+                              "updatedAt": "2018-07-24T03:46:26.000Z",
+                              "medicine": {
+                                  "id": 10,
+                                  "medicineName": "antibacteria",
+                                  "createdAt": "2018-07-24T03:46:26.000Z",
+                                  "updatedAt": "2018-07-24T03:46:26.000Z"
+                              }
+                          }`, 'success',
+                          `{
+                            "id": 1,
+                            "userId": 4,
+                            "medicineId": 10,
+                            "diagnose": "Deleniti enim commodi quod recusandae provident voluptatem molestiae voluptatibus dicta.",
+                            "createdAt": "2018-07-24T03:46:26.000Z",
+                            "updatedAt": "2018-07-24T03:46:26.000Z",
+                            "medicine": {
+                                "id": 10,
+                                "medicineName": "antibacteria",
+                                "createdAt": "2018-07-24T03:46:26.000Z",
+                                "updatedAt": "2018-07-24T03:46:26.000Z"
+                            }
+                        }`,'success','success',
+
+                          //  period
+
+                          `{
+                            "id": 1,
+                            "periodTime": "2018-07-24T03:46:26.000Z",
+                            "maxUser": 30,
+                            "countUser": 7,
+                            "createdAt": "2018-07-24T03:46:26.000Z",
+                            "updatedAt": "2018-07-24T03:46:26.000Z"
+                        }`,'success',
+                        `{
+                          "id": 1,
+                          "periodTime": "2018-07-24T03:46:26.000Z",
+                          "maxUser": 30,
+                          "countUser": 7,
+                          "createdAt": "2018-07-24T03:46:26.000Z",
+                          "updatedAt": "2018-07-24T03:46:26.000Z"
+                      }`,'success','success',
+                      
+                      
+                            //  dateclose
+                      ` {
+                        "id": 1,
+                        "date": "2018-07-24T03:46:27.000Z",
+                        "house": "16:26:20",
+                        "createdAt": "2018-07-24T03:46:27.000Z",
+                        "updatedAt": "2018-07-24T03:46:27.000Z"
+                    }`,'success',
+                    ` {
+                      "id": 1,
+                      "date": "2018-07-24T03:46:27.000Z",
+                      "house": "16:26:20",
+                      "createdAt": "2018-07-24T03:46:27.000Z",
+                      "updatedAt": "2018-07-24T03:46:27.000Z"
+                  }`,'success','success'
+
+                              
+                          
                                 ];
                                 
 for (var i = 0; i < url.length; i++) {
